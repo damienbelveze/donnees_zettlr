@@ -1,4 +1,0 @@
----
-aliases:
-  - Urfist de Rennes
----

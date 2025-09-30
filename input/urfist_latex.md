@@ -1,4 +1,0 @@
-
-yuiuiyiuyuyiu
-$\text{\LaTeX}$
-

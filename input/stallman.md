@@ -1,2 +1,0 @@
-
-![](images/stallman.jpg)
