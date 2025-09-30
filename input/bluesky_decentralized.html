@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<link rel="icon" href="https://unroller.zachmanson.com/favicon.svg">
+		<meta name="viewport" content="width=device-width">
+		
+		<link href="bluesky_decentralized_fichiers/0.f89b159b.css" rel="stylesheet"><title>Thread by @res260@infosec.exchange</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/nodes/0.8f714243.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/chunks/scheduler.63274e7e.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/chunks/index.7d52c00f.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/chunks/paths.c383de31.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/nodes/1.0c99385f.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/chunks/stores.cc59789b.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/chunks/singletons.77a8b55b.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/nodes/7.62252ee7.js"><link rel="modulepreload" as="script" crossorigin="" href="https://unroller.zachmanson.com/_app/immutable/chunks/each.e59479a4.js"></head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"> <div class="app"><header data-svelte-h="svelte-1vhkhbo"><nav class="flex flex-row w-full justify-between mb-2"><a href="https://unroller.zachmanson.com/">Mastodon Thread Unroller</a> <a href="https://notes.zachmanson.com/mastodon-thread-unroller/">About</a></nav> </header> <main> <div class="max-w-3xl m-auto mb-8"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 01/02/2025 23:01:25 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113930881319394167">permalink</a></div> <div class="pb-2"><p>A few facts and thoughts about <a rel="tag" class="mention hashtag" href="https://infosec.exchange/tags/BlueSky">#<span>BlueSky</span></a> being decentralized or not:</p><ol><li><p><a rel="tag" class="mention hashtag" href="https://infosec.exchange/tags/ATProto">#<span>ATProto</span></a>
+ (the protocol behind bluesky) is decentralized and open-source, but is 
+controlled by a for-profit (albeit fiscally a public benefit) 
+organization, "Bluesky Social PBC".</p></li><li><p>"Bluesky" refers to a
+ sum of ATProto concepts, notably the AppView (bsky.app), the main 
+Personal Data Servers (PDS, bsky.social), and the Relays (or firehose, 
+bsky.network). There are others, but they're the 3 important ones.</p></li><li><p>Anyone
+ can run their own AppView, PDS or Relay AND consume the content 
+from/get their content consumed by the Bluesky infrastructure. HOWEVER, 
+not everything is trivial or cheap to run.</p></li></ol><p>3.0 A PDS, 
+which contains your data (account details but also posts, likes, 
+follows, etc), is trivial and cheap to self-host. Cheaper than hosting a
+ mastodon instance, even, because it does way less stuff and receives 
+way less requests. See <a translate="no" rel="nofollow noopener" href="https://github.com/bluesky-social/pds"><span class="invisible">https://</span><span class="">github.com/bluesky-social/pds</span><span class="invisible"></span></a></p><p>3.1
+ An AppView (the presentation layer, where users interact with ATProto 
+content) can be created by anyone, but the bsky.app backend is NOT 
+open-source, so there are not a ton of options right now.<br>EDIT: seems like I was wrong and that the bsky.app AppView is open-source: <a translate="no" rel="nofollow noopener" href="https://github.com/bluesky-social/atproto/tree/main/packages/bsky"><span class="invisible">https://</span><span class="ellipsis">github.com/bluesky-social/atpr</span><span class="invisible">oto/tree/main/packages/bsky</span></a></p><p>3.2
+ Running a relay is trivial but expensive to self-host. This is because 
+its purpose is to act as an aggregator for all the PDS so that AppViews 
+can consume the data in a way that scales better. The Bluesky relay 
+implementation (bigsky) is open-source: <a translate="no" rel="nofollow noopener" href="https://github.com/bluesky-social/indigo/blob/main/cmd/bigsky/README.md"><span class="invisible">https://</span><span class="ellipsis">github.com/bluesky-social/indi</span><span class="invisible">go/blob/main/cmd/bigsky/README.md</span></a><br>About
+ 2.5 months ago, 4.5TB of storage was needed and an OVH server costing 
+150$/month worked to host a full-atmosphere relay (more on that later).</p><p>4.0 To make a comparison with <a rel="tag" class="mention hashtag" href="https://infosec.exchange/tags/ActivityPub">#<span>ActivityPub</span></a> (the protocol behind <a rel="tag" class="mention hashtag" href="https://infosec.exchange/tags/mastodon">#<span>mastodon</span></a>
+ ), the AppView and PDS is the same thing in ActivityPub, and the 
+concept of relay doesn't exist. There are advantages and drawbacks to 
+both architectures, I might do a future post highlighting those.</p><p>5.0 With those definitions out of the way, some observations:</p><p>5.1 A lot of users self-host their PDS, but the vast majority of users chose the simpler option.</p><p>5.2 There are some alternative AppViews built on ATProto, but the vast majority of users visit bsky.app.</p><p>5.3
+ There are very little non-bluesky self-hosting of relays, mostly 
+because of their prohibitive cost. Running the bigsky relay is expensive
+ partly because of design decisions for ATProto and partly because it 
+takes ALL content from ALL accounts for ALL the network on the 
+atmosphere (in this case atmosphere == fediverse but for ATProto). This 
+is like if your Mastodon instance queried ALL servers for ALL accounts 
+querying ALL posts. In the future, there might exist relays that don't 
+scrape ALL data but only a subset of it, which would bring down costs, 
+but it's not yet the case.</p><p>6.0 So "is Bluesky decentralized?"</p><p>6.1 In theory, yes, everything that bluesky does on ATProto can be.</p><p>6.2
+ In practice, however, the most decentralized part of Bluesky is the 
+PDS, where the user data is stored, and even that is not <em>that</em> decentralized.</p><p>6.3
+ Will it stay this way? I'm hopeful it won't, but I don't know. ATProto 
+is fairly new compared to ActivityPub, and the ecosystem around it was 
+mostly built by the BlueSky company, but I expect this to change in the 
+future. However, the cost of entry for things built on ATProto will 
+always be <em>more</em> than the cost of entry for things built on ActivityPub.</p><p>6.4 Things built on ActivityPub will always be <em>more</em> decentralized than things built on ATProto, because of design decisions from both of these protocols.</p> <div class="flex gap-2"><div class="text-center my-1"><img class="object-contain max-h-80" src="bluesky_decentralized_fichiers/29eeefbefff1ddbd.png"> </div></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 01/02/2025 23:12:16 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113930923996687319">permalink</a></div> <div class="pb-2"><p>My opinion: I <em>think</em> Bluesky is not <em>quite yet</em>
+ decentralized enough to prevent enshittification like Mastodon is, but 
+with the things on the Bluesky roadmap (for example being able to export
+ your keys from bsky.social which would allow transfering your identity 
+elsewhere), I'm hopeful it will be good enough. Time will tell! I'll 
+continue using both Bluesky and Mastodon for the foreseeable future, as I
+ get different value from both networks :)</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 04:55:20 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113932272978272618">permalink</a></div> <div class="pb-2"><p>It's worth noting that bluesky (the company) <em>for now</em>
+ has a good track record of shipping features that help with 
+decentralization. Here is a recent article detailing what they did and 
+how it helped mature the protocol: <a translate="no" rel="nofollow noopener" href="https://docs.bsky.app/blog/looking-back-2024"><span class="invisible">https://</span><span class="ellipsis">docs.bsky.app/blog/looking-bac</span><span class="invisible">k-2024</span></a></p><p>On
+ their roadmap, they have changes planed such as one to the 
+relays/firehose to lower the cost of operating a relay, or enabling to 
+host relays that consume and publishes only a subset of the information 
+in the atmosphere. If they ship that, this will help folks with less 
+resources to participate in the ecosystem, which should make the 
+atmosphere more resilient against enshittification.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://masto.bike/@martin">@martin@masto.bike</a>
+			at 01/02/2025 23:09:57 <a class="font-bold text-gray-400" href="https://masto.bike/@martin/113930914828635570">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> c'est dommage. Surtout que les instances clientes sur besoin de tout le domaine de données. </p><p>Ça
+ veut dire que les instances mastodon ne pourraient pas, si elles le 
+voulaient, devenir clients de atproto? Est-ce que je me trompes?  
+Est-ce-qu'il pourraient filter les messages auxquels ils ne sont pas 
+intéressé? Sûrement.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 01/02/2025 23:25:38 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113930976510769401">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://masto.bike/@martin">@<span>martin</span></a></span>
+ Pour que les posts mastodon soient visibles dans bluesky: Ça prend un 
+PDS qui mimick les comptes Mastodon (parce que le concept d'identité est
+ différent entre ATProto et ActivityPub) et qui implémente ActivityPub 
+pour "follow" tous les comptes qu'on veut copier vers bsky. Ça existe 
+déjà! Voir un exemple: <a translate="no" rel="nofollow noopener" href="https://bsky.app/profile/GossiTheDog.cyberplace.social.ap.brid.gy"><span class="invisible">https://</span><span class="ellipsis">bsky.app/profile/GossiTheDog.c</span><span class="invisible">yberplace.social.ap.brid.gy</span></a></p><p>Pour
+ que les posts bsky soient visibles via mastodon: Ça prend une 
+implémentation custom de Relay qui prend le data des users de bsky + une
+ instance mastodon dans laquelle on recrée tous les comptes pour publier
+ les messages. Ça aussi ça existe déjà! Si tu veux suivre mes 
+publications Bluesky sur Mastodon, tu peux me suivre sur ce compte: <span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://bsky.brid.gy/r/https://bsky.app/profile/res260.bsky.social">@<span>res260.bsky.social</span></a></span> </p><p>Si je me trompe pas, ça te permet également répondre à mes posts bluesky via mastodon, et je pourrais les voir sur bluesky.</p><p>C'est
+ la chose la plus proche d'un interop complet qu'on peut avoir entre 
+ActivityPub et ATProto pour le moment, surtout à cause que le concept 
+d'identité est différent entre les deux protocoles.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://masto.bike/@martin">@martin@masto.bike</a>
+			at 01/02/2025 23:38:21 <a class="font-bold text-gray-400" href="https://masto.bike/@martin/113931026538754699">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> <span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://bsky.brid.gy/r/https://bsky.app/profile/res260.bsky.social">@<span>res260.bsky.social</span></a></span> je suis déjà quelques comptes sur le bridge. Ça marchotte mais c'est pas l'expérience parfaite. Espérons qu'il y aura mieux. </p><p>Je ne suis pas près à me rejeter dans la gueule du capitalisme pour un truc aussi important. </p><p>Je suis bien ici🙂</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div></div></div><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://social.beaware.live/@BeAware">@BeAware@social.beaware.live</a>
+			at 01/02/2025 23:24:05 <a class="font-bold text-gray-400" href="https://social.beaware.live/@BeAware/113930970409340975">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> so basically, it's not decentralized, but the technology is there if Bluesky wants it to be decentralized.</p><p>To
+ be honest, I don't see a reason why they'd make the changes they'd need
+ to make to make it decentralized. They're a VC funded company and it's 
+hard to get a return on investment in users that can leave your 
+corporately controlled platform.</p><p>Currently not decentralized. 
+Don't see a future where it will be decentralized. Same corporate walled
+ garden as twitter. It's just a matter of time until enshittification 
+commences.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 01/02/2025 23:32:06 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113931001937422093">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://social.beaware.live/@BeAware">@<span>BeAware</span></a></span>
+ I would maybe nuance your first phrase like this: "so basically, it's 
+not decentralized, but the technology is there if some people with a 
+medium amount of resources want it to be decentralized."</p><p>It's 
+currently not entirely up to bluesky to decide how decentralized the 
+network is. They have in their roadmap things planned that with help 
+with decentralization, but everything is currently there for people to 
+make it more decentralized.</p><p>However, the BlueSky company COULD 
+make it harder to decentralize, for example by only allowing THEIR 
+AppView to consume from their Relays (firehose). This is why having more
+ independant relays will be key to ensure that ATProto becomes more 
+decentralized. If you know about TOR nodes, it's kind of the same 
+things. If one entity controls most TOR nodes, this entity owns the TOR 
+network, which is not supposed to happen.</p><p>TOR as a protocol and network kind of has a similar problem, as running a TOR node can be expensive.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://social.beaware.live/@BeAware">@BeAware@social.beaware.live</a>
+			at 01/02/2025 23:51:05 <a class="font-bold text-gray-400" href="https://social.beaware.live/@BeAware/113931076607329411">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> okay cool. Thanks for the correction and explanation.</p><p>However,
+ I am still concerned about the amount of resources these things take. 
+Like you said, it's not cheap so only small companies, groups, and 
+people willing to fork out the funds for that would be able to do it.</p><p>That makes it slightly decentralized, but not nearly as much as Fedi. I run my own instance for $40-$50.</p><p>Doesn't seem good for decentralization.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 00:14:15 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113931167664496613">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://social.beaware.live/@BeAware">@<span>BeAware</span></a></span>
+ Exactly, hence my last point 6.4. At the core of this decision, the 
+fact that bluesky explicitely wanted to allow discovery/algorithms 
+(among other things) to be first-class citizens in ATProto, whereas 
+ActivityPub was designed for many small and independent instances 
+talking to each other. This makes having discovery/algorithms much 
+harder in the fediverse, albeit not completely impossible. However a lot
+ of the folks in the fediverse are ideologically against algorithms, so 
+we don't see much of them anyway.</p><p>2013-era, simple algorithms like
+ "popular with friends" is personally a big reason why I like Bluesky, 
+but it does make it less feel like a community than the fediverse.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://mastodon.social-pod.org/@dadmin2">@dadmin2@mastodon.social-pod.org</a>
+			at 02/02/2025 09:39:45 <a class="font-bold text-gray-400" href="https://mastodon.social-pod.org/@dadmin2/113933391359712530">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> <span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://social.beaware.live/@BeAware">@<span>BeAware</span></a></span> "but it does make it less feel like a community than the fediverse."</p><p>I
+ wonder if that's more about which one you started using first? I've 
+used Bluesky more than Mastodon so far. I very quickly found people to 
+follow with similar interests on Bluesky. On Mastodon I'm finding it 
+difficult to find people with the same interests and it seems to be 
+filled with many bots reposting content from other sources.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 16:17:35 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113934955700041947">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://mastodon.social-pod.org/@dadmin2">@<span>dadmin2</span></a></span> <span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://social.beaware.live/@BeAware">@<span>BeAware</span></a></span> Perhaps! I think, for me, it comes from relying more on algorithms, as I have a lot of people with similar interests on bsky.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div></div></div></div></div></div></div></div></div><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://mastodon.online/@andrewmelder">@andrewmelder@mastodon.online</a>
+			at 02/02/2025 03:38:11 <a class="font-bold text-gray-400" href="https://mastodon.online/@andrewmelder/113931969568412743">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> I know there's a lot of technical nuances around whether it is or isn't. </p><p>But
+ looking from the most high level viewpoint: once there is a service I 
+can sign up and use, that is built on ATProto and NOT reliant on 
+Bluesky; only then will I consider it decentralised.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 03:49:48 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113932015293452093">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://mastodon.online/@andrewmelder">@<span>andrewmelder</span></a></span> That's totally fair. Here is one of the many work in progress to make it happen: <a translate="no" rel="nofollow noopener" href="https://opencollective.com/blacksky/updates/no-action-required-at-this-time-blacksky-algorithms-incorporated"><span class="invisible">https://</span><span class="ellipsis">opencollective.com/blacksky/up</span><span class="invisible">dates/no-action-required-at-this-time-blacksky-algorithms-incorporated</span></a></p><p>Blacksky plans to have their own PDS, and AppView. I'm not sure they plan to have a relay/firehose yet, though.</p><p>I hope they succeed! We all win by decentralizing some parts of our social experience.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://hachyderm.io/@mapache">@mapache@hachyderm.io</a>
+			at 02/02/2025 04:02:07 <a class="font-bold text-gray-400" href="https://hachyderm.io/@mapache/113932063673745531">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span>
+ I really like how the presentation (appview) is separated from the 
+content (PDS), and I wish the fediverse had something like that. But the
+ tradeoff of having a huge relay/firehose in the middle I think is not 
+worth the trade off.</p><p>But competition always bring innovation, that is cool.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 04:43:38 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113932226984547486">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://hachyderm.io/@mapache">@<span>mapache</span></a></span>
+ Yes! One of the thing I like also is that with atproto, your identity 
+is NOT tied to your PDS. This means that you can keep your identity even
+ if the PDS goes rogue or goes down. However, bsky.app does not yet 
+allow you to export your rotation key (which allows to transfer your 
+identity without the PDS being involved), but it's in their roadmap.</p><p><a translate="no" rel="nofollow noopener" href="https://docs.bsky.app/blog/2024-protocol-roadmap"><span class="invisible">https://</span><span class="ellipsis">docs.bsky.app/blog/2024-protoc</span><span class="invisible">ol-roadmap</span></a></p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://hachyderm.io/@mapache">@mapache@hachyderm.io</a>
+			at 02/02/2025 05:44:52 <a class="font-bold text-gray-400" href="https://hachyderm.io/@mapache/113932467763135365">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span>
+ tbf that is something doable on activitypub not explored enough. Your 
+inbox (the PDS of activitypub) can be in another domain than your handle
+ (the actor endpoint). The only thing you need to keep is your piv/pub 
+keys.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 06:13:17 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113932579448757136">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://hachyderm.io/@mapache">@<span>mapache</span></a></span> <span translate="no" class="h-card"><a class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span>
+ Nice! Is it exactly the same? Like could I recover my account even if I
+ lose access to my domain? Quite unlikely for sure, but I.m interested 
+to see how it's designed in AP</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div></div></div></div></div><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://wetdry.world/@esm">@esm@wetdry.world</a>
+			at 02/02/2025 05:37:05 <a class="font-bold text-gray-400" href="https://wetdry.world/@esm/113932437131317502">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> regarding 3.1: <a translate="no" rel="nofollow noopener" href="https://github.com/bluesky-social/atproto/tree/main/packages/bsky"><span class="invisible">https://</span><span class="ellipsis">github.com/bluesky-social/atpr</span><span class="invisible">oto/tree/main/packages/bsky</span></a></p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 06:02:24 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113932536707198964">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://wetdry.world/@esm">@<span>esm</span></a></span> <span translate="no" class="h-card"><a class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> Nice, I didnt find it during my research! Do you know if this is the <em>whole</em> backend of bsky.app? I'm on my phone so it's a bit hard to browse.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://wetdry.world/@esm">@esm@wetdry.world</a>
+			at 02/02/2025 06:18:11 <a class="font-bold text-gray-400" href="https://wetdry.world/@esm/113932598746074612">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/@res260">@<span>res260</span></a></span> it looks fairly complete to me</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div></div></div><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://libranet.de/profile/petrescatraian">@petrescatraian@libranet.de</a>
+			at 02/02/2025 11:24:30 <a class="font-bold text-gray-400" href="https://libranet.de/display/0b6b25a8-7867-9f47-deb1-fd4931448897">permalink</a></div> <div class="pb-2"><span class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://infosec.exchange/users/res260">@<span>res260</span></a></span> And people said Mastodon is confusing... <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"><div class="ml-2 pl-1 pt-1 relative duration-100"><div class="text-gray-400 text-xs"><span class="text-base hover:underline font-mono">[-]</span> <a class="text-blue-500 text-base" href="https://infosec.exchange/@res260">@res260@infosec.exchange</a>
+			at 02/02/2025 17:51:35 <a class="font-bold text-gray-400" href="https://infosec.exchange/@res260/113935325331259772">permalink</a></div> <div class="pb-2"><p><span translate="no" class="h-card"><a rel="nofollow noopener" class="u-url mention" href="https://libranet.de/profile/petrescatraian">@<span>petrescatraian</span></a></span>
+ Haha if I was to dive into the specifics of ActivityPub, it would be 
+very complicated as well 😂 I think the main critique is about the user 
+experience, not the underlying protocols.</p> <div class="flex gap-2"></div></div> <div class="border-solid border-l-2"></div></div></div></div></div></div></div></main></div> <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;"></div></div>
+	
+
+</body></html>

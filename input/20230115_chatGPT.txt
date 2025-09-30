@@ -1,0 +1,44 @@
+belvezedamien@gmail.com :
+
+import pypandoc
+from citeproc import CitationStylesStyle, CitationStylesBibliography
+
+# path to your citation style file
+style_path = 'D:\Home\dbelveze\Desktop\ieee.csl'
+# path to your bibliography file
+bibliography_path = 'D:\Home\dbelveze\Desktop\coulmont.bib'
+
+# read in your markdown file
+with open('pseudonymat.md', 'r') as f:
+    markdown_text = f.read()
+
+# create a citation style and bibliography object
+style = CitationStylesStyle(style_path)
+biblio = CitationStylesBibliography(style, bibliography_path)
+
+# convert the markdown text to HTML while processing citations
+html_text = pypandoc.convert_text(markdown_text, 'html', format='md', extra_args=['--citeproc', '--bibliography=biblio'])
+# print the HTML text
+print(html_text)
+
+ChatGPT:
+This code is using the pypandoc library to convert a markdown file to HTML, while also processing citations using the citeproc library. The code first reads in a markdown file called 'pseudonymat.md' and then creates a citation style object and a bibliography object using the 'ieee.csl' style file and 'coulmont.bib' bibliography file respectively. It then uses pypandoc to convert the markdown text to HTML and pass the citation style and bibliography objects as arguments. Finally, it prints the resulting HTML text.
+
+belvezedamien@gmail.com
+  File "D:\Home\dbelveze\Desktop\chatGPTpandoc.py", line 18, in <module>
+    pdf_text = pypandoc.convert_text(markdown_text, 'pdf', format='md', outputfile='pdf_text.pdf', extra_args=['--citeproc', '--bibliography=biblio'])
+  File "C:\Program Files\Python310\lib\site-packages\pypandoc\__init__.py", line 93, in convert_text
+    return _convert_input(source, format, 'string', to, extra_args=extra_args,
+  File "C:\Program Files\Python310\lib\site-packages\pypandoc\__init__.py", line 420, in _convert_input
+    raise RuntimeError(
+RuntimeError: Pandoc died with exitcode "99" during conversion: File biblio not found in resource path
+
+ChatGPT:
+The error message is indicating that the file 'biblio' is not found in the resource path. The 'bibliography' argument passed to the 'extra_args' list in the 'convert_text' function is expecting the file path to the bibliography file, not just the name of the file. It should be the path where the bibliography file is located.
+
+Try changing the following line:
+extra_args=['--citeproc', '--bibliography=biblio']
+to
+extra_args=['--citeproc', f'--bibliography={bibliography_path}']
+
+It should fix the issue, as it will pass the correct file path to the bibliography file, rather than just the name of the file.

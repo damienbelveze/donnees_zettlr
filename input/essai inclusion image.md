@@ -1,0 +1,4 @@
+![[booléens.jpg]]
+
+
+![[sollers.png]]

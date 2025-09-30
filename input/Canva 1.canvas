@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"14a46210946ed0cd","type":"group","x":-1420,"y":-220,"width":1847,"height":660,"label":"group"},
+		{"id":"fcd431b78ec9afb7","type":"file","file":"fascisme.md","x":-1400,"y":-200,"width":320,"height":73},
+		{"id":"173d365155f1bd38","type":"file","file":"populisme.md","x":106,"y":-200,"width":301,"height":75},
+		{"id":"7b434e414f5b482a","type":"file","file":"images/fake_pythagoras.jpg","x":-140,"y":-200,"width":206,"height":272},
+		{"id":"196a1f549c62946a","type":"file","file":"autoritarisme.md","x":-1040,"y":-200,"width":860,"height":620}
+	],
+	"edges":[
+		{"id":"0685e338c0e55da4","fromNode":"196a1f549c62946a","fromSide":"right","toNode":"fcd431b78ec9afb7","toSide":"left"},
+		{"id":"a20b3e019fb7abb6","fromNode":"196a1f549c62946a","fromSide":"bottom","toNode":"173d365155f1bd38","toSide":"top"}
+	]
+}
