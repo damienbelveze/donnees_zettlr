@@ -17,7 +17,7 @@ tags: [visualisation_données, données_recherche]
 
 Web of science -> export en RIS. 
 
-![](arango_graphe.png)
+![](images/arango_graphe.png)
 
 [[co-autorat]] : le graphe fait ressortir les auteurs qui ont publié ensemble
 co-occurrence : le graphe fait ressortir les auteurs qui apparaissent ensemble dans le texte

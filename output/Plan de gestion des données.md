@@ -121,7 +121,7 @@ templates disciplinaires :
 
 ## checklist pour juger la complétude d'un plan de données
 
-![](pdf/grille_relecture_PGD.pdf)
+![](images/pdf/grille_relecture_PGD.pdf)
 
 ## structure de base d'un DMP
 

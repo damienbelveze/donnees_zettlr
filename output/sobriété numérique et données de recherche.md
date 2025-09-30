@@ -36,7 +36,7 @@ voir Ruée minière au XXIème siècle (voir Célia Izoard)
 Le [[capitalisme]] est historiquement une activité minière et l'aspect [[extractiviste]] de ce modèle économique un temps mis sous le boisseau revient de plus belle en 2022 avec comme prétexte la [[Transition écologique]]
 impacts négatifs sur les populations 
 
-![](sobriété_1.png)
+![](images/sobriété_1.png)
 le top des 500 supercalculateurs consomme 430 MW par an (la France en 24/500)
 
 Accélération continue des capacités de ces supercalculateurs

@@ -11,17 +11,17 @@ aliases: [file_naming_conventions]
 tags: [données_recherche]
 ---
 
-![](naming_conventions.jpg)
+![](images/naming_conventions.jpg)
 
 ![](images/naming_conventions.png)
 la question du nommage des fichiers est évidemment imbriquée dans la question du versionage (pour cette dernière voir [[Git]])
-![](structure_naming.png)
+![](images/structure_naming.png)
 
 search tools : certains proposent une recherche full text, d'autres non. Ces outils dépendent aussi des [[systèmes d'exploitation]] ; on ne peut pas obliger tout le monde à utiliser le même OS. 
 
 pas de règle d'or ou bien une "meta" règle d'or : quand on s'est dotée d'une règle, on s'y tient !
 recommandation : intégrer suffisamment de métadonnées dans le nom de fichier (date + format + [[autorités matière|vocabulaire contrôlé]] si possible + numéro de version : )
-![](file_naming_convention.png)
+![](images/file_naming_convention.png)
 versionage : 0.1.0 : première version d'un fichier
 0.1.1 : changement mineur à une section (patch modification)
 1.0.1 : première modification après la livraison de la première version majeure. 
@@ -29,7 +29,7 @@ versionage : 0.1.0 : première version d'un fichier
 ![](images/file_naming_conventions2.png)
 voir [[Format de date]]
 longueur maximale du chemin, voir [[chemin (path)]]
-![](file_naming_conventions3.png)
+![](images/file_naming_conventions3.png)
 caractères spéciaux dans les noms de fichiers : importantes variations entre les OS, pour être multiplateforme, il vaut mieux les éviter. 
 
 extensions pas nécessaires (aide à la lecture)

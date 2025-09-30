@@ -26,7 +26,7 @@ pour les questions de stockage, voir [[stockage des données]]
 
 Etude de 2013 parue dans Nature
 
-![](perte_donnees.png)
+![](images/perte_donnees.png)
 source : [[@gibneyScientistsLosingData2013]]
 80% des données sous-jacentes sont indisponibles après 20 ans.
 

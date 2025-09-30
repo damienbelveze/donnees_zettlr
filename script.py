@@ -3,6 +3,7 @@ import shutil
 import yaml
 import markdown
 from bs4 import BeautifulSoup
+import re
 
 def read_frontmatter(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -19,7 +20,11 @@ def read_frontmatter(file_path):
                 frontmatter.append(line)
 
         if frontmatter:
-            return yaml.safe_load(''.join(frontmatter))
+            try:
+                return yaml.safe_load(''.join(frontmatter))
+            except yaml.YAMLError as e:
+                print(f"Error parsing YAML in file {file_path}: {e}")
+                return {}
         return {}
 
 def copy_files_with_tag(source_dir, target_dir, tag):
@@ -79,15 +84,56 @@ def copy_images(image_files, img_target_dir):
         else:
             print(f"Warning: Image file does not exist {img_file}")
 
+def find_citekeys(md_source_dir):
+    citekeys = set()
+    citekey_pattern = re.compile(r'\[\[@(.*?)\]\]')
+
+    for root, _, files in os.walk(md_source_dir):
+        for file in files:
+            if file.endswith('.md'):
+                file_path = os.path.join(root, file)
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    matches = citekey_pattern.findall(content)
+                    citekeys.update(matches)
+
+    print("Citekeys found:", citekeys)
+    return citekeys
+
+def move_reference_files(citekeys, ref_source_dir, ref_target_dir):
+    if not os.path.exists(ref_target_dir):
+        os.makedirs(ref_target_dir)
+
+    for citekey in citekeys:
+        ref_filename = '@' + citekey + '.md'
+        ref_file_path = os.path.join(ref_source_dir, ref_filename)
+        if os.path.exists(ref_file_path):
+            shutil.move(ref_file_path, os.path.join(ref_target_dir, ref_filename))
+            print(f"Moved: {ref_file_path} to {ref_target_dir}")
+        else:
+            print(f"Warning: Reference file not found {ref_file_path}")
+
 if __name__ == "__main__":
     source_directory = 'input'
     target_directory = 'output'
     tag_to_check = 'données_recherche'
     img_source_directory = 'input/images'
     img_target_directory = 'output/images'
+    ref_source_directory = 'input/references'
+    ref_target_directory = 'output/references'
 
     copy_files_with_tag(source_directory, target_directory, tag_to_check)
 
     image_files = send_images_folder(source_directory, img_source_directory, img_target_directory)
     copy_images(image_files, img_target_directory)
 
+    citekeys = find_citekeys(target_directory)
+    move_reference_files(citekeys, ref_source_directory, ref_target_directory)
+
+
+"""
+parse makdown files in search of [[@.....]] (citekey)
+make a list of these citekeys
+for each citekey in the list search the corresponding filename (base filename without extension .md) in the input/references
+move all these markdown files to output/references
+"""

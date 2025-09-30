@@ -30,7 +30,7 @@ Rappeler l'intérêt d'un cahier de laboratoire avec les cahiers de labo de Mari
 https://gallica.bnf.fr/ark:/12148/btv1b10536281j.r=cahier%20de%20laboratoire%20marie%20curie?rk=21459;2
 
 attachement au papier dans le cadre des expériences "sur paillasse", mais ces notes  prises sur le papier peuvent être plus avantageusement saisies dans un cahier de labo que dans [[Microsoft Word]]
-![](fonctions_cahier_labo.JPG)
+![](images/fonctions_cahier_labo.JPG)
 
 Elabftw en cours de labellisation pour devenir l'outil de référence du CNRS
 
@@ -38,13 +38,13 @@ Elabftw en cours de labellisation pour devenir l'outil de référence du CNRS
 
 objectif des cahiers numériques et en l'occurrence d'ElabFTW : 
 
-![](elabftw1.JPG)
+![](images/elabftw1.JPG)
 
-![](ElabFTW2.JPG)
+![](images/ElabFTW2.JPG)
 
-![](ElabFTW3.JPG)
+![](images/ElabFTW3.JPG)
 
-![](ElabFTW5.JPG)
+![](images/ElabFTW5.JPG)
 La difficulté de prise en main du logiciel n'est pas dans la maîtrise des fonctionnalités, mais dans la manière dont on va concevoir la structure de l'expérience (qu'est-ce qui ressort des ressources, comment les expériences s'organisent les unes par rapport aux autres dans les différents projets)
 
 - Fournit une [[sauvegarde de données]] numérique (mais ElabFTW n'est pas fait pour de l'[[stockage des données|archivage de données]])

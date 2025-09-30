@@ -26,6 +26,8 @@ species <- df %>%
 
 # cas d'usage
 
+## repérer les DOI dans une citation
+
 façon de faire des masques pour saisir différentes variantes d'une même expression
 
 Comment remplacer des liens par un texte de lien cliquable
@@ -56,6 +58,15 @@ ne pas oublier le **+** pour que la recherche s'effectue sur tous les caractère
 cliquer sur remplacer tout. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DsvHS3edZPk?start=399" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## repérer les balises title mal formatés dans un ensemble de fichiers
+
+pour repérer dans un ensemble de fichiers en markdown les balises title qui ont un : dans le titre
+
+```shell
+grep -E 'title: "[^"]+:[^"]+"|title: [^:]+:[^"]+' *.md
+```
+
 
 # bibliographie
 

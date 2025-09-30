@@ -84,7 +84,7 @@ Les sciences de l'information ont la particularité de comprendre dans leur réf
 
 Les données de la recherche s'inscrivent dans la catégorie plus large des inscriptions ([[Bruno Latour]]) : objets intermédiaires des savoirs produits en amont de la publication.
 
-![](data_narrative.jpg)
+![](images/data_narrative.jpg)
 
 ## nettoyage des données
 

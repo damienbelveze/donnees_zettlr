@@ -19,6 +19,7 @@ tags:
 source: [[@chuehongFAIRPrinciplesResearch2022]]
 
 
+)
 # application des principes
 
 [guide](https://mi-gt-donnees.pages.math.unistra.fr/guide/00-introduction.html) la gestion des [[données de la recherche|données de recherche]] selon les principes FAIR par l'atelier Données de l'Université de Strasbourg.
@@ -34,7 +35,7 @@ L'objet d'un [[Plan de gestion des données]] est de montrer comment ces princip
 
 ![[FAIR.png]]
 
-![fair data principe](images/FAIR1.jpg)
+![fair data principe](FAIR1.jpg)
 
 # *Interoperable* : la question des formats ouverts
 

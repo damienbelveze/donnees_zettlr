@@ -30,7 +30,7 @@ Freins au partage du [[code source]], voir [[@stoddenEmpiricalAnalysisJournal201
 
 Le [[Plan de gestion des données]] doit être explicite sur la manière dont les données peuvent être communiquées. Il doit comporter un DAS ([[Data Availibility Statement]]) ou bien ce DAS doit figurer dans l'article publié, mais cela ne suffit pas. Il faut encore que les chercheurs qui font figurer dans le DAS que les données seront accessibles sur demande, répondent effectivement aux demandes, or une étude de 2022 portant sur 3416 articles disposant d'un DAS a montré que dans 93% des cas, les auteurs ne répondaient pas aux demandes ou y répondaient négativement sans justification[[@gabelicaManyResearchersWere2022]]. Etude citée par [[@ziemannFivePillarsComputational2023]]
 
-![](data_available_request.jpg)
+![](images/data_available_request.jpg)
 
 Ce refus ou bien cette absence de réponses peut avoir plusieurs raisons : 
 - les chercheurs sont généralement intéressés par utiliser les données des autres, mais peu enclin à partager les leurs

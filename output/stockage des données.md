@@ -31,7 +31,7 @@ tags:
 
 GIP, datacenter labellisé en Bretagne
 
-![](eskemm.PNG)
+![](images/eskemm.PNG)
 
 mutualisation de serveurs. 
 but : 
